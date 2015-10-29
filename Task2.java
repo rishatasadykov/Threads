@@ -13,7 +13,7 @@ public class Task2<T> {
 			if (l.size() != maxCount) {
 				l.add(e);
 				a.notifyAll();
-				System.out.println("Obj added");
+				System.out.println("Object added");
 			} else {
 				boolean added = false;
 				while (!added) {
