@@ -28,7 +28,7 @@ public class Task2<T> {
 						l.add(e);						
 						added = true;
 						a.notifyAll();
-						System.out.println("Obj added");
+						System.out.println("Object added");
 					}
 				}
 			}
@@ -40,7 +40,7 @@ public class Task2<T> {
 			T t = null;
 			while (!removed) {
 				if (l.isEmpty()) {
-					System.out.println("Colection is empty...");
+					System.out.println("Collection is empty...");
 					try {
 						a.wait();
 					} catch (InterruptedException e1) {
@@ -51,7 +51,7 @@ public class Task2<T> {
 					l.remove(0);
 					removed = true;
 					a.notifyAll();
-					System.out.println("Obj removed");
+					System.out.println("Object removed");
 				}
 			}
 			return t;
